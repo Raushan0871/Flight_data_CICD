@@ -25,7 +25,7 @@ def main(env,bq_project,bq_dataset,transformed_table,route_insights_table,origin
         logger.info('Spark session initialized.')
         
         # Resolve GCS path based on the environment
-        input_path = f"gs://airflow_project-gds/airflow-project-1/source-{env}"
+        input_path = f"gs://airflow_project_gds/airflow-project-1/source-{env}"
         logger.info(f'Input path resolved: {input_path}')
         
         # Read the data from GCS
