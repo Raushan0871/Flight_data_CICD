@@ -52,7 +52,7 @@ def main(env,bq_project,bq_dataset,transformed_table,route_insights_table,origin
         
         logger.info(f"Writing transformed data to BigQuery table: {bq_project}:{bq_dataset}.{transformed_table} ")
         transformed_data.write \
-            .format("BigQuery") \
+            .format("bigQuery") \
             .option("table",f"{bq_project}:{bq_dataset}.{transformed_table}") \
             .option("writeMethod","direct") \
             .mode("overwrite") \
