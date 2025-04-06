@@ -46,7 +46,7 @@ with DAG(
         google_cloud_conn_id="google_cloud_default",
         timeout=300,
         poke_interval = 30,
-        mode="poke"
+        mode="poke",
     )
     
     # Task 2: Submit PySpark job to Dataproc Serverless
@@ -71,8 +71,8 @@ with DAG(
         "environment_config":{
             "execution_config":{
                 "service_account":"814467953394-compute@developer.gserviceaccount.com",
-                "network_uri":"",
-                "subnetwork_uri":""
+                "network_uri":"projects/amiable-vent-454406-h2/global/networks/default",
+                "subnetwork_uri":"projects/amiable-vent-454406-h2/regions/us-central1/subnetworks/default"
             }
         }
     }
